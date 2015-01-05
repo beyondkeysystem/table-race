@@ -1,0 +1,8 @@
+.modal-wait
+    .modal-header
+        h3.help-block.alert.alert-info {{"DIALOGS_PLEASE_WAIT" | translate}}
+    .modal-body
+        p {{msg}}
+        .progress.progress-striped.active
+            .progress-bar.progress-bar-info(data-ng-style='getProgress()')
+            span.sr-only {{progress}} {{"DIALOGS_PERCENT_COMPLETE" | translate}}

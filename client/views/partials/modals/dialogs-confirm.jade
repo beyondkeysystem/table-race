@@ -1,0 +1,10 @@
+.modal-confirm
+    .modal-header
+        h3.help-block.alert.alert-danger(data-ng-if="isError") {{header}}
+        h3.help-block.alert.alert-info(data-ng-if="!isError") {{header}}
+    .modal-body {{msg}}
+    .modal-footer
+        button.btn.btn-warning(type='button', data-ng-click='no()', data-ng-if="isError") {{"DIALOGS_NO" | translate}}
+        button.btn.btn-danger(type='button', data-ng-click='no()', data-ng-if="!isError") {{"DIALOGS_NO" | translate}}
+        button.btn.btn-danger(type='button', data-ng-click='yes()', data-ng-if="isError") {{"DIALOGS_YES" | translate}}
+        button.btn.btn-primary(type='button', data-ng-click='yes()', data-ng-if="!isError") {{"DIALOGS_YES" | translate}}

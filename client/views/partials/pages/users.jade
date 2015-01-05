@@ -1,0 +1,20 @@
+.row
+    .col-md-6.col-md-offset-3
+        .h2
+            i.fa.fa-users.margin-right-small
+            | Users
+        .h3(data-ng-if="!loaded") Loading Users list...
+        .profile.margin-bottom-small(data-ng-if="loaded && allUsers.length", data-ng-repeat="user in allUsers")
+            .panel.panel-primary
+                .panel-heading
+                    .panel-title
+                        span {{user.name}}
+                        i.fa.pull-right.margin-right-small.text-150(class="fa-{{user.logo}}-square")
+                .panel-body
+                    .row
+                        .col-md-6
+                            ul.list-unstyled
+                                li {{user.email}}
+                                li Since: {{user.created | date:'MMM dd, yyyy HH:mm:ss'}}
+                        .col-md-6
+                            img.margin-left-small.pull-right(data-ng-src="{{user.photo}}", alt="User Photo", width="50px")

@@ -1,0 +1,173 @@
+.content {
+    padding-top: 4em;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.striped > *:nth-child(odd) {
+    background-color: rgb(221, 221, 221);
+}
+
+.rounded-small {
+    .border-top-radius(5px);
+    .border-left-radius(5px);
+    .border-right-radius(5px);
+    .border-bottom-radius(5px);
+}
+
+.disabled {
+    color: #999999;
+}
+
+.no-margin {
+    margin: 0;
+}
+
+.xs-no-margin {
+    @media (min-width: @screen-xs-min) and (max-width: @screen-xs-max) {
+        margin: 0;
+    }
+}
+
+.sm-no-margin {
+    @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+        margin: 0;
+    }
+}
+
+.md-no-margin {
+    @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+        margin: 0;
+    }
+}
+
+.lg-no-margin {
+    @media (min-width: @screen-lg-min) {
+        margin: 0;
+    }
+}
+
+.no-padding {
+    padding: 0;
+}
+
+.no-left-padding {
+    padding-left: 0;
+}
+
+.no-right-padding {
+    padding-right: 0;
+}
+
+.xs-no-padding {
+    @media (min-width: @screen-xs-min) and (max-width: @screen-xs-max) {
+        padding: 0;
+    }
+}
+
+.sm-no-padding {
+    @media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+        padding: 0;
+    }
+}
+
+.md-no-padding {
+    @media (min-width: @screen-md-min) and (max-width: @screen-md-max) {
+        padding: 0;
+    }
+}
+
+.lg-no-padding {
+    @media (min-width: @screen-lg-min) {
+        padding: 0;
+    }
+}
+
+.margin-none {
+    margin: 0;
+}
+
+.margin-right-small {
+    margin-right: @margin-small;
+}
+
+.margin-top-small {
+    margin-top: @margin-small;
+}
+
+.margin-left-small {
+    margin-left: @margin-small;
+}
+
+.margin-bottom-small {
+    margin-bottom: @margin-small;
+}
+
+.padding-small {
+    padding: @padding-small-vertical;
+}
+
+.padding-left-small {
+    padding-left: @padding-small-horizontal;
+}
+
+.padding-horizontal-md {
+    padding-left: 0.7em;
+    padding-right: 0.7em;
+}
+
+.margin-top-md {
+    margin-top: @margin-md;
+}
+
+.margin-top-large {
+    margin-top: 7%;
+}
+
+.block-style {
+    display: block;
+}
+
+.inline-style {
+    display: inline-block;
+}
+
+.inline-block-style {
+    display: inline-block;
+}
+
+.full-width {
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.scrollable-panel {
+    display: block;
+    overflow: auto;
+}
+
+.basic-pre {
+    font-size: inherit;
+    font-family: inherit;
+    border: none;
+    background: transparent;
+    color: inherit;
+    white-space: pre-wrap;
+    padding: 0;
+}
+
+.btn + .btn.no-margin {
+    margin: 0;
+}
+
+.page-title {
+    .related-to-title {
+        color: @gray-light;
+    }
+}
+
+tr.details-row > td {
+    background-color: #D9EDF7;
+}

@@ -1,0 +1,22 @@
+.row
+    .col-md-6.col-md-offset-3
+        .h2
+            i.fa.fa-user.margin-right-small
+            | Profile
+        .h3(ng-if="!loaded") Loading Profile...
+        .profile(ng-if="loaded && user.name")
+            .alert.alert-success You are connected with
+                span.capitalize  {{user.network}}
+            .panel.panel-primary
+                .panel-heading
+                    .panel-title
+                        span {{user.name}}
+                        i.fa.pull-right.margin-right-small.text-150(class="fa-{{user.logo}}-square")
+                .panel-body
+                    .row
+                        .col-md-6
+                            ul.list-unstyled
+                                li {{user.email}}
+                                li Since: {{user.created | date:'MMM dd, yyyy HH:mm:ss'}}
+                        .col-md-6
+                            img.img-rounded.margin-left-small.pull-right(ng-src="{{user.photo}}", alt="User Photo", width="50px")

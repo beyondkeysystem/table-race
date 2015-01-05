@@ -1,0 +1,32 @@
+.navbar.navbar-default.navbar-fixed-top
+    .container-fluid.fp-navbar
+        .row
+            .col-md-12
+                .navbar-header.margin-right-small
+                    a.navbar-brand.navbar-image-container.font-rock-salt.text-150(href="/#/") Table Race
+                .navbar-collapse.collapse(role="navigation", data-ng-if="!menu.login && user._id.length")
+                    ul.nav.navbar-nav
+                        li(ng-class="{active: menu.index}")
+                            a(href="/#/") Home
+                        li(ng-class="{active: menu.users}")
+                            a(href="/#/users") Users
+                    ul.nav.navbar-nav.navbar-right
+                        li
+                            img.img-rounded.margin-top-small(data-ng-src="{{user.photo}}", width="40")
+                        li.dropdown
+                            a.dropdown-toggle
+                                i.fa.fa-gear.text-175
+                            ul.dropdown-menu
+                                li
+                                    a(data-ng-href="/#/profile/{{user._id}}")
+                                        i.fa.fa-user.text-125.margin-right-small
+                                        | Profile
+                                li
+                                    a(href="/#/invite")
+                                        i.fa.fa-envelope.text-125.margin-right-small
+                                        | Invite Friends
+                                li.divider
+                                li
+                                    a(data-ng-click="logout()")
+                                        i.fa.fa-sign-out.text-125.margin-right-small
+                                        | Logout

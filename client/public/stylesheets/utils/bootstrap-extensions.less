@@ -1,0 +1,34 @@
+.label {
+    &.label-tag {
+        display: inline-block;
+    }
+}
+
+.btn {
+
+    &.btn-text-left {
+        text-align: left;
+    }
+
+    &.btn-text-right {
+        text-align: right;
+    }
+
+    &.btn-text-center {
+        text-align: center;
+    }
+
+    &.non-clickeable {
+        cursor: default;
+    }
+
+    &.disabled {
+        color: #FFFFFF;
+    }
+
+    &.btn-default {
+        &.disabled {
+            color: #666666;
+        }
+    }
+}
